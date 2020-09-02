@@ -32,10 +32,21 @@ namespace PRG5.CSharpCity.BrewMaster.Domain
             _gezetteBakjes = new List<KoffieSoort>();
         }
 
+        /// <summary>
+        /// This is a readonly property with an Expression to return the right private variable.
+        /// The code behind the arrow (=>) is what the getter returns as value
+        /// </summary>
         public List<KoffieSoort> GezetteBakjes => _gezetteBakjes;
 
+        /// <summary>
+        /// This is an automatic property. There is no other logic besides getting and setting a private variable.
+        /// That would be trivial code, .Net and C# allow is the directly specify both variable and getters/setters
+        /// </summary>
         public KoffieSoort SoortBakkie { get; set; }
 
+        /// <summary>
+        /// This is a readonly property. The user of this class can only read this value.
+        /// </summary>
         public int AantalBakjes {
             get {
                 return _aantalBakjes;
